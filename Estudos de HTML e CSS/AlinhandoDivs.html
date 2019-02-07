@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	input {
+		width: 2em;
+		height: 2em;
+	}
+
+
+	</style>
+</head>
+<body>
+	<div class="table-responsive noSwipe" style="max-width: 30% !important">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <label class="custom-control custom-checkbox be-select-all">
+                            <input class="cidades" type="checkbox"><span class="custom-control-label"></span>
+                        </label>
+                    </th>
+                    <th>Cidades</th>
+                </tr>    
+            </thead>
+        </table>    
+    </div>
+    <div>
+    	<table>
+    		<tr>
+    			<th>
+                    <label class="custom-control custom-checkbox be-select-all">
+                        <input id="cidade" type="checkbox"><span class="custom-control-label"></span>
+                    </label>
+                </th>
+    		</tr>
+    		<tr>
+    			<th>
+                    <label class="custom-control custom-checkbox be-select-all">
+                        <input id="cidade" type="checkbox"><span class="custom-control-label"></span>
+                    </label>
+                </th>
+    		</tr>
+    		<tr>
+    			<th>
+                    <label class="custom-control custom-checkbox be-select-all">
+                        <input id="cidade" type="checkbox"><span class="custom-control-label"></span>
+                    </label>
+                </th>
+    		</tr>
+    		<tr>
+    			<th>
+                    <label class="custom-control custom-checkbox be-select-all">
+                        <input id="cidade" type="checkbox"><span class="custom-control-label"></span>
+                    </label>
+                </th>
+    		</tr>
+    		<tr>
+    			<th>
+                    <label class="custom-control custom-checkbox be-select-all">
+                        <input id="cidade" type="checkbox"><span class="custom-control-label"></span>
+                    </label>
+                </th>
+    		</tr>
+    	</table>
+    </div>                        
+</div>
+</body>
+<script type="text/javascript">
+$(function(){	
+	//select all checkboxes
+$("#cidades").change(function(){  //"select all" change 
+	var status = this.checked; // "select all" checked status
+	$('.cidade').each(function(){ //iterate all listed checkbox items
+		this.checked = status; //change ".checkbox" checked status
+	});
+});
+
+$('.cidade').change(function(){ //".checkbox" change 
+	//uncheck "select all", if one of the listed checkbox item is unchecked
+	if(this.checked == false){ //if this item is unchecked
+		$("#cidades")[0].checked = false; //change "select all" checked status to false
+	}
+	
+	//check "select all" if all checkbox items are checked
+	if ($('.cidade:checked').length == $('.cidade').length ){ 
+		$("#cidades")[0].checked = true; //change "select all" checked status to true
+	}
+});
+});
+</script>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+</html>
+
