@@ -1,0 +1,23 @@
+@media print {
+	* {
+		background: transparent !important;
+		border-color: #000 !important;
+		box-shadow: none !important;
+		color: #000 !important;
+		text-shadow: none !important; 
+	}
+
+	a {
+		text-decoration: underline !important;
+	}
+	/* técnica recomendada para tratar links em casos de impressão
+	exibindo o caminho que eles possuem logo após o seu texto*/
+	a[href]::after {
+		content: " (" attr(href) ")";
+	}
+	/* para links que não possuem uma url, como links que utilizam funções
+	de javascript.*/
+	a[href^="javascript:"]::after, a[href^="#"]::after {
+		content: "";
+	}	
+}
