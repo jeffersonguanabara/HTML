@@ -19,5 +19,13 @@
 	de javascript.*/
 	a[href^="javascript:"]::after, a[href^="#"]::after {
 		content: "";
-	}	
+	}
+	article {
+		page-break-after: always;
+	}
+	.page-break {
+		display: none;
+	}
+	
+
 }
