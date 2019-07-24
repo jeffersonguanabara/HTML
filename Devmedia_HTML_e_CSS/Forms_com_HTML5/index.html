@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Forms com HTML 5</title>
+    </head>
+
+    <body>
+    
+        <form action="" method="get">
+            <fieldset>
+                <legend id="titulo_cadastro">CADASTRO PESSOAL</legend>
+                <label>Nome Completo: </label>
+                <input type="text" name="nome_completo" placeholder="ex: Thiago Pereira da Silva" required>
+                <label>Email: </label>
+                <input type="email" name="email" placeholder="ex:paulo@gmail.com" required>
+                <br><br>
+                <label>CPF: </label>
+                <input type="text" name="cpf" placeholder="ex: 12345678910" required>
+                <br><br>
+                <label>Registro Geral(RG): </label>
+                <input type="text" name="rg" required>
+                <label>Orgão Expedidor: </label>
+                <select required>
+                    <option value="SSP">Secretária de Segurança Pública</option>
+                </select>
+                <br><br>    
+                <label>Data de Nascimento: </label>
+                <input type="date" name="data_de_nascimento" required>
+                <br><br>
+                <label>Nacionalidade: </label>
+                <input type="text" name="nacionalidade">
+                <br><br>
+                <label>Naturalidade: </label>
+                <input type="text" name="naturalidade">
+                <br><br>
+                <label>CEP: </label>
+                <input type="text" name="cep" required>
+                <br><br>
+                <label>Logradouro: </label>
+                <input type="text" name="logradouro">
+                <label>Número: </label>
+                <input type="number" name="numero" min="1">
+                <br><br>
+                <label>Complemento: </label>
+                <input type="text" name="complemento">
+                <label>Bairro: </label>
+                <input type="text" name="bairro">
+                <br><br>
+                <label>Cidade: </label>
+                <input type="text" name="cidade">
+                <label>Estado: </label>
+                <input type="text" name="estado">
+                <br><br>
+                <input type="submit" value="Cadastrar">
+            </fiedset>
+        </form>
+    </body>
+</html>
